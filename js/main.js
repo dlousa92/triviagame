@@ -1,11 +1,21 @@
-
-function selectAnswer (e) {
+function highlightAnswer (e) {
   e.preventDefault()
 
-  const answer = e.target
-  if (answer.tagName === 'A') {
-    answer.parentElement.style.background = 'green'
+  if (e.target.tagName === 'A') {
+    e.target.parentElement.classList.add('selectedAnswer')
   }
 }
 
-document.body.addEventListener('click', selectAnswer)
+function unHighlightAnswer (e) {
+  e.preventDefault()
+
+  if (e.target.tagName === 'A') {
+    e.target.parentElement.classList.remove('selectedAnswer')
+  }
+}
+
+document.body.addEventListener('mouseover', highlightAnswer)
+document.body.addEventListener('mouseout', unHighlightAnswer)
+
+const submit = document.body.getElementsByTagName('button')
+console.log(submit)
