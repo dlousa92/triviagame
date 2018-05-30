@@ -1,8 +1,10 @@
 
 function selectAnswer (e) {
   e.preventDefault()
-  if (e.target.tagName === 'A') {
-    console.log('You clicked me')
+
+  const answer = e.target
+  if (answer.tagName === 'A') {
+    answer.parentElement.style.background = 'green'
   }
 }
 
