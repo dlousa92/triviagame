@@ -1,6 +1,4 @@
-const answers = ['Answer 1', 'correct answer 2', 'correct answer 1', 'correct answer 1', 'correct answer 1',
-  'correct answer 1', 'correct answer 1', 'correct answer 1', 'correct answer 1', 'correct answer 1' ]
-
+let n = 0
 
 function highlightAnswer (e) {
   e.preventDefault()
@@ -22,12 +20,12 @@ function checkAnswer (e) {
   e.preventDefault()
 
   const submit = e.target
+  const score = document.body.querySelector('.score')
 
   if (submit.tagName === 'A') {
-    if (submit.innerHTML === answers[0]) {
-      console.log('correct')
-    } else {
-      console.log('incorrect')
+    if (submit.dataset.value === 'correct') {
+      submit.parentElement.classList.add('correct')
+      score.innerHTML = 'Score: ' + (n += 1)
     }
   }
 }
@@ -35,5 +33,3 @@ function checkAnswer (e) {
 document.body.addEventListener('mouseover', highlightAnswer)
 document.body.addEventListener('mouseout', unHighlightAnswer)
 document.body.addEventListener('click', checkAnswer)
-const h = document.body.querySelectorAll('a')
-console.log(h)

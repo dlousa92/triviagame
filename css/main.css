@@ -99,7 +99,16 @@ li {
   transform: scale(1.1);
   border-color: red;
   background: yellow;
-  
+}
+
+.correct {
+  border-color: green;
+  background: green;
+}
+
+.incorrect {
+  border: red;
+  background: red;
 }
 
 a {
