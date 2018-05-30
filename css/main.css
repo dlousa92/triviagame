@@ -62,11 +62,12 @@ section {
 }
 
 p {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 ul {
   list-style-type: none;
+  padding: 30px;
 }
 
 li {
