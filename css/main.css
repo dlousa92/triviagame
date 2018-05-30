@@ -33,11 +33,11 @@ h2 {
   margin: 5px 0 5px 150px;
 }
 
-#titlestart {
+.titlestart {
   align-self: flex-start;
 }
 
-#titleend {
+.titleend {
   align-self: flex-end;
   margin: 5px 250px 5px 0px;
 }
@@ -93,6 +93,13 @@ li {
   text-align: center;
   font-size: 20px;
   padding: 5px 5px;
+}
+
+.selectedAnswer {
+  transform: scale(1.1);
+  border-color: red;
+  background: yellow;
+  
 }
 
 a {
