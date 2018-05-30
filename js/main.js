@@ -27,7 +27,7 @@ function checkAnswer (e) {
       submit.parentElement.classList.add('correct')
       score.innerHTML = 'Score: ' + (n += 1)
     } else {
-      submit.parentElement.classList.add('incorrect')
+      submit.parentElement.parentElement.parentElement.classList.add('hide')
     }
   }
 }
