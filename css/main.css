@@ -7,15 +7,35 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
 
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 h1 {
   font-family: 'Bungee Inline', cursive;
   font-size: 85px;
+
 }
 
 h2 {
   font-family: 'Bungee Inline', cursive;
-  font-size: 30px;
+  font-size: 40px;
+  margin: 5px 0 5px 200px;
+}
+
+#titlestart {
+  align-self: flex-start;
+}
+
+#titleend {
+  margin: 5px -300px 5px 290px;
 }
