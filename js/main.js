@@ -1,3 +1,8 @@
+const answers = ['correct answer 1', 'correct answer 2', 'correct answer 1', 'correct answer 1', 'correct answer 1',
+  'correct answer 1', 'correct answer 1', 'correct answer 1', 'correct answer 1', 'correct answer 1' ]
+
+console.log(answers)
+
 function highlightAnswer (e) {
   e.preventDefault()
 
@@ -16,6 +21,3 @@ function unHighlightAnswer (e) {
 
 document.body.addEventListener('mouseover', highlightAnswer)
 document.body.addEventListener('mouseout', unHighlightAnswer)
-
-const submit = document.body.getElementsByTagName('button')
-console.log(submit)
