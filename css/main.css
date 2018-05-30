@@ -10,6 +10,7 @@ body {
   justify-content: center;
   width: 90%;
   margin: 0 auto;
+  font-family: 'Ubuntu', sans-serif;
 
 }
 
@@ -29,7 +30,7 @@ h1 {
 h2 {
   font-family: 'Bungee Inline', cursive;
   font-size: 40px;
-  margin: 5px 0 5px 200px;
+  margin: 5px 0 5px 150px;
 }
 
 #titlestart {
@@ -37,5 +38,16 @@ h2 {
 }
 
 #titleend {
-  margin: 5px -300px 5px 290px;
+  align-self: flex-end;
+  margin: 5px 250px 5px 0px;
+}
+
+main {
+  margin: 100px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+aside {
+  font-size: 40px;
 }
