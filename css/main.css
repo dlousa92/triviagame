@@ -49,5 +49,26 @@ main {
 }
 
 aside {
+  border: 1px solid black;
   font-size: 40px;
+  padding: 0px 0px 0px 0px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+
+  margin: 20px 0px;
+}
+
+p {
+  font-size: 40px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  border: 1px solid black;
 }
