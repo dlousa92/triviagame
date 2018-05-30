@@ -26,6 +26,8 @@ function checkAnswer (e) {
     if (submit.dataset.value === 'correct') {
       submit.parentElement.classList.add('correct')
       score.innerHTML = 'Score: ' + (n += 1)
+    } else {
+      submit.parentElement.classList.add('incorrect')
     }
   }
 }
