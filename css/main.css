@@ -12,4 +12,10 @@ body {
 
 h1 {
   font-family: 'Bungee Inline', cursive;
+  font-size: 85px;
+}
+
+h2 {
+  font-family: 'Bungee Inline', cursive;
+  font-size: 30px;
 }
