@@ -5,7 +5,7 @@ let n = 0
 function highlightAnswer (e) {
   e.preventDefault()
 
-  if (e.target.tagName === 'A') {
+  if (e.target.parentElement.tagName === 'LI') {
     e.target.parentElement.classList.add('selectedAnswer')
   }
 }
@@ -14,7 +14,7 @@ function highlightAnswer (e) {
 function unHighlightAnswer (e) {
   e.preventDefault()
 
-  if (e.target.tagName === 'A') {
+  if (e.target.parentElement.tagName === 'LI') {
     e.target.parentElement.classList.remove('selectedAnswer')
   }
 }
@@ -23,25 +23,29 @@ function unHighlightAnswer (e) {
 function checkAnswer (e) {
   e.preventDefault()
 
-  const submit = e.target
+  const target = e.target
   const score = document.body.querySelector('.score')
 
-  if (submit.tagName === 'A') {
-    if (submit.dataset.value === 'correct') {
-      submit.parentElement.classList.add('correct')
+  if (target.parentElement.tagName === 'LI') {
+    if (target.dataset.value === 'correct') {
+      target.parentElement.classList.add('correct')
       score.innerHTML = 'Score: ' + (n += 1)
     } else {
-      submit.parentElement.classList.add('incorrect')
-      const rightAnswer = (submit.parentElement.parentElement.querySelector('[data-value]'))
+      target.parentElement.classList.add('incorrect')
+      const rightAnswer = (target.parentElement.parentElement.querySelector('[data-value]'))
       rightAnswer.parentElement.classList.add('correct')
-
-      // code below is an idea to make wrong answers dissapear
-      // submit.parentElement.parentElement.parentElement.classList.add('hide')
     }
   }
 }
 
 function submitScore (e) {
+  if (n <= 5) {
+    document.body.classList.add('reallybad')
+  } else if (n < 10) {
+    document.body.classList.add('notbad')
+  } else {
+    document.body.classList.add('great')
+  }
 }
 
 const button = document.body.querySelector('button')
