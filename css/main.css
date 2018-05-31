@@ -12,6 +12,7 @@ body {
   margin: 0 auto;
   font-family: 'Titillium Web', sans-serif;
   background: #858786;
+  color: #FEF6C9;
 }
 
 header {
@@ -19,13 +20,11 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: #CAB7A2;
 }
 
 h1 {
   font-family: 'Bungee Inline', cursive;
   font-size: 85px;
-
 }
 
 h2 {
@@ -49,7 +48,6 @@ main {
   flex-direction: column;
   align-items: center;
   width: 90%;
-  color: #CAB7A2;
 }
 
 aside {
@@ -64,8 +62,6 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: all 5s;
-
   margin: 20px 0px;
 }
 
@@ -98,7 +94,7 @@ li {
   text-align: center;
   font-size: 20px;
   padding: 5px 5px;
-  transition: all 0.2s
+  transition: .5s;
 }
 
 .selectedAnswer {
@@ -114,8 +110,8 @@ li {
 }
 
 .incorrect {
-  border: red;
-  background: red;
+  border: #A40E4C;
+  background: #A40E4C;
 }
 
 .hide { 
