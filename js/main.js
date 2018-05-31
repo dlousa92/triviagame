@@ -1,5 +1,6 @@
 // scoreboard
 let n = 0
+const score = document.body.querySelector('.score')
 
 // will bring forth answers when you mouse over them
 function highlightAnswer (e) {
@@ -24,7 +25,6 @@ function checkAnswer (e) {
   e.preventDefault()
 
   const target = e.target
-  const score = document.body.querySelector('.score')
 
   if (target.parentElement.tagName === 'LI') {
     if (target.dataset.value === 'correct') {
@@ -55,6 +55,21 @@ function submitScore (e) {
   }
 }
 
+const checkKonami = []
+const test = 'tenletters1'
+const konami = 'ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightbaEnter'
+
+function konamiCode (e) {
+  console.log(e.key)
+  checkKonami.push(e.key)
+  checkKonami.splice(-test.length - 1, checkKonami.length - test.length)
+
+  if (checkKonami.join('').includes(konami)) {
+    const bonus = document.body.querySelector('#konamicode')
+    bonus.parentElement.classList.add('correct')
+  }
+}
+
 // all event listeners listed below
 const button = document.body.querySelector('button')
 
@@ -62,3 +77,4 @@ document.body.addEventListener('mouseover', highlightAnswer)
 document.body.addEventListener('mouseout', unHighlightAnswer)
 document.body.addEventListener('click', checkAnswer)
 button.addEventListener('click', submitScore)
+window.addEventListener('keyup', konamiCode)
