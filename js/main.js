@@ -39,12 +39,15 @@ function checkAnswer (e) {
 }
 
 function submitScore (e) {
-  if (n <= 5) {
-    document.body.classList.add('reallybad')
-  } else if (n < 10) {
-    document.body.classList.add('notbad')
+  if (n <= 0) {
+    document.body.querySelector('.reallybad').style.zIndex = 3
+    document.body.classList.add('game-over')
+  } else if (n <= 1) {
+    document.body.querySelector('.notbad').style.zIndex = 3
+    document.body.classList.add('game-over')
   } else {
-    document.body.classList.add('great')
+    document.body.querySelector('.great').style.zIndex = 3
+    document.body.classList.add('game-over')
   }
 }
 
