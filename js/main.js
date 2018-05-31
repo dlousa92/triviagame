@@ -1,5 +1,7 @@
+// scoreboard
 let n = 0
 
+// will bring forth answers when you mouse over them
 function highlightAnswer (e) {
   e.preventDefault()
 
@@ -8,6 +10,7 @@ function highlightAnswer (e) {
   }
 }
 
+// when you hover off the answer it'll put them back into place
 function unHighlightAnswer (e) {
   e.preventDefault()
 
@@ -16,6 +19,7 @@ function unHighlightAnswer (e) {
   }
 }
 
+// when an answer is clicked this will check to see if its correct, each correct answer has a data-value assigned to it
 function checkAnswer (e) {
   e.preventDefault()
 
@@ -27,7 +31,12 @@ function checkAnswer (e) {
       submit.parentElement.classList.add('correct')
       score.innerHTML = 'Score: ' + (n += 1)
     } else {
-      submit.parentElement.parentElement.parentElement.classList.add('hide')
+      submit.parentElement.classList.add('incorrect')
+      const rightAnswer = (submit.parentElement.parentElement.querySelector('[data-value]'))
+      rightAnswer.parentElement.classList.add('correct')
+
+      // code below is an idea to make wrong answers dissapear
+      // submit.parentElement.parentElement.parentElement.classList.add('hide')
     }
   }
 }
