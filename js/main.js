@@ -29,7 +29,7 @@ function checkAnswer (e) {
   if (target.parentElement.tagName === 'LI') {
     if (target.dataset.value === 'correct') {
       target.parentElement.classList.add('correct')
-      score.innerHTML = 'Score: ' + (n += 1)
+      score.innerText = 'Score: ' + (n += 1)
     } else {
       target.parentElement.classList.add('incorrect')
       const rightAnswer = (target.parentElement.parentElement.querySelector('[data-value]'))
