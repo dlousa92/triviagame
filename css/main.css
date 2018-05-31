@@ -11,7 +11,8 @@ body {
   width: 90%;
   margin: 0 auto;
   font-family: 'Titillium Web', sans-serif;
-  background: #858786;
+  /* background: #858786; */
+  background: #5F6060;
   color: #FEF6C9;
 }
 
@@ -20,6 +21,7 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 20px;
 }
 
 h1 {
@@ -30,16 +32,16 @@ h1 {
 h2 {
   font-family: 'Bungee Inline', cursive;
   font-size: 40px;
-  margin: 5px 0 5px 150px;
 }
 
 .titlestart {
   align-self: flex-start;
+  margin: 5px 0 5px 130px;
 }
 
 .titleend {
   align-self: flex-end;
-  margin: 5px 250px 5px 0px;
+  margin: 5px 220px 5px 0px;
 }
 
 main {
@@ -69,7 +71,7 @@ section {
   width: 100px;
   margin-top: 0;
   position: fixed;
-  background: #CAB7A2;
+  background: #FEF6C9;
   color: #5d5f5e;
 }
 
@@ -97,6 +99,7 @@ li {
   transition: .5s;
 }
 
+/* These are classes given to the answer boxes when they are hovered over and clicked */
 .selectedAnswer {
   transform: scale(1.1);
   border-color:#8AA29E;
@@ -105,8 +108,8 @@ li {
 }
 
 .correct {
-  border-color: #729157;
-  background: #729157;
+  border-color: #40BC40;
+  background: #40BC40;
 }
 
 .incorrect {
@@ -114,17 +117,14 @@ li {
   background: #A40E4C;
 }
 
-.hide { 
-  display: none;
-  opacity: 0;
-}
-
 a {
   text-decoration: none;
-  color: #CAB7A2;
+  color: #FEF6C9;
 }
 
-button {
-  width: 100px;
-  font-size: 20px;
+footer {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin-bottom: 20px;
 }
