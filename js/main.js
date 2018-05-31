@@ -41,6 +41,12 @@ function checkAnswer (e) {
   }
 }
 
+function submitScore (e) {
+}
+
+const button = document.body.querySelector('button')
+
 document.body.addEventListener('mouseover', highlightAnswer)
 document.body.addEventListener('mouseout', unHighlightAnswer)
 document.body.addEventListener('click', checkAnswer)
+button.addEventListener('click', submitScore)
