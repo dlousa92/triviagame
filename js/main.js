@@ -38,19 +38,24 @@ function checkAnswer (e) {
   }
 }
 
+// will display an end game screen based on how user scored during quiz
 function submitScore (e) {
   if (n <= 0) {
     document.body.querySelector('.reallybad').style.zIndex = 3
     document.body.classList.add('game-over')
+    document.body.scrollTop = document.documentElement.scrollTop = 0
   } else if (n <= 1) {
     document.body.querySelector('.notbad').style.zIndex = 3
     document.body.classList.add('game-over')
+    document.body.scrollTop = document.documentElement.scrollTop = 0
   } else {
     document.body.querySelector('.great').style.zIndex = 3
     document.body.classList.add('game-over')
+    document.body.scrollTop = document.documentElement.scrollTop = 0
   }
 }
 
+// all event listeners listed below
 const button = document.body.querySelector('button')
 
 document.body.addEventListener('mouseover', highlightAnswer)
