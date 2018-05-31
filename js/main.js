@@ -40,11 +40,11 @@ function checkAnswer (e) {
 
 // will display an end game screen based on how user scored during quiz
 function submitScore (e) {
-  if (n <= 0) {
+  if (n <= 5) {
     document.body.querySelector('.reallybad').style.zIndex = 3
     document.body.classList.add('game-over')
     document.body.scrollTop = document.documentElement.scrollTop = 0
-  } else if (n <= 1) {
+  } else if (n <= 14) {
     document.body.querySelector('.notbad').style.zIndex = 3
     document.body.classList.add('game-over')
     document.body.scrollTop = document.documentElement.scrollTop = 0
