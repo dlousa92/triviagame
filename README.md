@@ -1,5 +1,5 @@
-# triviagame
-Code Trivia
+# Trivia Game
+
 I used HTML, CSS and Javascript to build this cool little trivia game that will test your basic knowledge about code and web design.
 
 I began the project by setting out a bronze, silver, and gold plan of the deliverables I could include in the game.
