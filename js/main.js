@@ -41,14 +41,17 @@ function checkAnswer (e) {
 // will display an end game screen based on how user scored during quiz
 function submitScore (e) {
   if (n <= 5) {
+    displayScore1.innerText = n + ' of 15'
     document.body.querySelector('.reallybad').style.zIndex = 2
     document.body.classList.add('game-over')
     document.body.scrollTop = document.documentElement.scrollTop = 0
   } else if (n <= 14) {
+    displayScore2.innerText = n + ' of 15'
     document.body.querySelector('.notbad').style.zIndex = 2
     document.body.classList.add('game-over')
     document.body.scrollTop = document.documentElement.scrollTop = 0
   } else {
+    displayScore3.innerText = n + ' of 15'
     document.body.querySelector('.great').style.zIndex = 2
     document.body.classList.add('game-over')
     document.body.scrollTop = document.documentElement.scrollTop = 0
@@ -58,11 +61,10 @@ function submitScore (e) {
 // bonus konami code secret I've added to the webpage
 const checkKonami = []
 
-const test = 'tenletters1' // string  value serves no purpose other than to check the length of the checkKonami array as 10
+const test = 'tenletters1' // string  value serves no purpose other than to check the length of the checkKonami array and limit it to 10
 const konami = 'ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightbaEnter'
 
 function konamiCode (e) {
-  console.log(e.key)
   checkKonami.push(e.key)
   checkKonami.splice(-test.length - 1, checkKonami.length - test.length)
 
@@ -74,6 +76,9 @@ function konamiCode (e) {
 
 // all event listeners listed below
 const button = document.body.querySelector('button')
+const displayScore1 = document.body.querySelector('.displayscore1')
+const displayScore2 = document.body.querySelector('.displayscore2')
+const displayScore3 = document.body.querySelector('.displayscore3')
 
 document.body.addEventListener('mouseover', highlightAnswer)
 document.body.addEventListener('mouseout', unHighlightAnswer)

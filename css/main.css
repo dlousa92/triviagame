@@ -162,6 +162,15 @@ button {
   pointer-events: all;
 }
 
+.title {
+  font-size: 100px;
+}
+
+.displayscore1, .displayscore2, .displayscore3 {
+  margin-bottom: 20px;
+  font-size: 40px;
+}
+
 
 footer {
   display: flex;
