@@ -56,6 +56,7 @@ aside {
   font-size: 40px;
   padding: 0px 0px 0px 0px;
   align-self: flex-end;
+  background: #FEF6C9;
 }
 
 section {
@@ -69,16 +70,20 @@ section {
 .score {
   width: 100px;
   margin-top: 0;
-  position: fixed;
-  background: #FEF6C9;
-  color: #5d5f5e;
+  position: fixed; 
   top: 17%;
   right: 3%;
+  background: #FEF6C9;
+  color: #5d5f5e;
 }
 
 .questions {
   font-size: 18px;
   padding: 1px 1px;
+}
+
+.questions:hover {
+  transform: scale(1.1)
 }
 
 nav {
