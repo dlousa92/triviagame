@@ -40,7 +40,7 @@ function checkAnswer (e) {
 // will display an end game screen based on how user scored during quiz
 
 function submitScore (e) {
-  if (n <= 5) {
+  if (n <= 8) {
     displayScore1.innerText = n + ' of 15'
     document.body.querySelector('.reallybad').style.zIndex = 2
     document.body.classList.add('game-over')
