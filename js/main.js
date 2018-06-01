@@ -41,22 +41,24 @@ function checkAnswer (e) {
 // will display an end game screen based on how user scored during quiz
 function submitScore (e) {
   if (n <= 5) {
-    document.body.querySelector('.reallybad').style.zIndex = 3
+    document.body.querySelector('.reallybad').style.zIndex = 2
     document.body.classList.add('game-over')
     document.body.scrollTop = document.documentElement.scrollTop = 0
   } else if (n <= 14) {
-    document.body.querySelector('.notbad').style.zIndex = 3
+    document.body.querySelector('.notbad').style.zIndex = 2
     document.body.classList.add('game-over')
     document.body.scrollTop = document.documentElement.scrollTop = 0
   } else {
-    document.body.querySelector('.great').style.zIndex = 3
+    document.body.querySelector('.great').style.zIndex = 2
     document.body.classList.add('game-over')
     document.body.scrollTop = document.documentElement.scrollTop = 0
   }
 }
 
+// bonus konami code secret I've added to the webpage
 const checkKonami = []
-const test = 'tenletters1'
+
+const test = 'tenletters1' // string  value serves no purpose other than to check the length of the checkKonami array as 10
 const konami = 'ArrowUpArrowUpArrowDownArrowDownArrowLeftArrowRightArrowLeftArrowRightbaEnter'
 
 function konamiCode (e) {
