@@ -10,7 +10,6 @@ function highlightAnswer (e) {
     e.target.parentElement.classList.add('selectedAnswer')
   }
 }
-
 // when you hover off the answer it'll put them back into place
 function unHighlightAnswer (e) {
   e.preventDefault()
@@ -39,6 +38,7 @@ function checkAnswer (e) {
 }
 
 // will display an end game screen based on how user scored during quiz
+
 function submitScore (e) {
   if (n <= 5) {
     displayScore1.innerText = n + ' of 15'
@@ -76,12 +76,13 @@ function konamiCode (e) {
 
 // all event listeners listed below
 const button = document.body.querySelector('button')
+const main = document.body.querySelector('main')
 const displayScore1 = document.body.querySelector('.displayscore1')
 const displayScore2 = document.body.querySelector('.displayscore2')
 const displayScore3 = document.body.querySelector('.displayscore3')
 
 document.body.addEventListener('mouseover', highlightAnswer)
 document.body.addEventListener('mouseout', unHighlightAnswer)
-document.body.addEventListener('click', checkAnswer)
+main.addEventListener('click', checkAnswer)
 button.addEventListener('click', submitScore)
 window.addEventListener('keyup', konamiCode)
