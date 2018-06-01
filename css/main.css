@@ -170,6 +170,18 @@ footer {
   margin-bottom: 10px;
 }
 
+.portfolio:hover {
+  color: #5F6060;
+  background: #FEF6C9;
+  border-radius: 5px;
+}
+
+.github:hover {
+  color: #5F6060;
+  background: #FEF6C9;
+  border-radius: 5px;
+}
+
 span {
   font-family: 'Pacifico', cursive;
 }
