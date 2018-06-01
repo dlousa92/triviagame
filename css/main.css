@@ -72,8 +72,21 @@ section {
   position: fixed;
   background: #FEF6C9;
   color: #5d5f5e;
+  top: 17%;
+  right: 3%;
 }
 
+.questions {
+  font-size: 18px;
+  padding: 1px 1px;
+}
+
+nav {
+  position: fixed;
+  top: 25%;
+  left: 86%;
+  height: 200px;
+}
 p {
   font-size: 30px;
   text-align: center;
@@ -137,7 +150,7 @@ button {
   position: absolute;
   width: 100%;
   height: 970vh;
-  top: 50%;
+  top: 40%;
   left: 50%;
   text-align: center;
   background: #5F6060;
