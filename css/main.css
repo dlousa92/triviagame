@@ -26,6 +26,7 @@ header {
 h1 {
   font-family: 'Bungee Inline', cursive;
   font-size: 85px;
+  text-shadow: -6px 6px black;
 }
 
 h2 {
@@ -36,11 +37,13 @@ h2 {
 .titlestart {
   align-self: flex-start;
   margin: 5px 0 5px 130px;
+  text-shadow: -6px 6px black;
 }
 
 .titleend {
   align-self: flex-end;
   margin: 5px 220px 5px 0px;
+  text-shadow: -6px 6px black;
 }
 
 main {
