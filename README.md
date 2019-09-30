@@ -16,6 +16,3 @@ I like flexbox as it allows for smooth flow in styling and clean code.
 
 You dont need to do anything special to play, just visit the site and start the quiz!
 Good luck, and remember Up, Up, Down, Down, Left, Right, Left, Right, B, A, Start.
-
-As of right now there is an issue with the links at the bottom of the page not working properly.
-The only way they open are if you right click on them and specify that you want to open them in a new tab or window.
